@@ -1,0 +1,43 @@
+<html>
+<head>
+  <style type="text/css">
+    br {
+      border: 1pt solid black;
+      background-color: green;
+
+    }
+
+  </style>
+</head>
+
+<body>
+<h1>
+  Testing how the whitespace removeal works.
+</h1>
+<p style="font-family:monospace;">
+  <span style="border:1px solid red">a <span style="border:1px solid blue"> b </span> a</span>
+</p>
+
+<hr/>
+
+<!-- Inline-block elements are unsupported in Mozilla. -->
+<p>
+  <span>
+  And I'm an Inline Element
+  <div style="display:inline-block; border: 1px solid red">
+    <div>And I'm an Inline Block Element </div>
+    <div>All content here is layouted as block content.</div>
+  </div>
+  And this is still inline
+  </span>
+</p>
+
+<div style="border: 1px solid green">
+  <div style="display:block; margin-left: auto; margin-right: auto; width: 250pt; border: 1px solid red">
+    <div>And I'm an Inline Block Element </div>
+    <div>All content here is layouted as block content.</div>
+  </div>
+</div>
+
+</body>
+</html>

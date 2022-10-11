@@ -1,0 +1,5 @@
+Implementation-Title: liblayout
+Implementation-Vendor: Pentaho Corporation
+Release-Major-Number: 0
+Release-Minor-Number: 2
+Release-Milestone-Number: 10

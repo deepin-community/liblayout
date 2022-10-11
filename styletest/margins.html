@@ -1,0 +1,90 @@
+<html>
+<head>
+  <style type="text/css">
+    br {
+      border: 1pt solid black;
+      background-color: green;
+
+    }
+
+  </style>
+</head>
+
+<body><!--  style="width:595pt"> -->
+
+<h1>
+  The first working margins test
+</h1>
+<div style="margin: 10pt; background-color: green">
+  <div style="margin: 20pt; background-color: blue">
+    test
+  </div>
+</div>
+
+<h1>
+  Testing nested margins
+</h1>
+<div style="margin: 1em">
+  <div style="margin: 2em">
+    <div style="margin: 1em">
+      Test
+    </div>
+  </div>
+</div>
+
+
+<h1>
+  Testing how borders affect the nested margins
+</h1>
+<div style="border: 1pt solid black; margin: 2em">
+  <div style="border: none; margin: 2em">
+    <div style="border: 1pt solid black; margin: 2em">
+
+    </div>
+  </div>
+</div>
+
+<h3>Testing, how margins in Inline-Elements affect the system.</h3>
+<p>
+  A long line that can be broken down. <span style="margin: 100pt; color: blue;">A line with margin-top: 10pt.</span> Does that line have any effect?
+</p>
+
+<p>
+  A long line that can be broken down. <span style="margin: 100pt; color: blue; display:inline-block;">A inline-block with margin-top: 10pt.</span> Does that line have any effect?
+</p>
+
+<p>
+  A long line that can be broken down. <span style="border: 1pt solid black; margin: 100pt; color: blue; display:inline-block;">A inline-block with margin-top: 10pt.</span> Does that line have any effect?
+</p>
+
+<h3>Testing nested margins</h3>
+<div style="border: 1px solid red">
+  <div style="margin: 10pt; background-color:green">
+    <div style="margin: 50pt; background-color:yellow">
+      Test
+    </div>
+  </div>
+</div>
+The Green area in the left and right is 50pt, as inline-level margins never
+collapse. The distance between the red box and the top and bottom edge is 50pt.
+The distance between the left/right edge and the border of the box is 10pt.
+
+<h3>Testing nested margins (collapsing at the root)</h3>
+<div style="margin: 10pt; background-color:green">
+  <div style="margin: 50pt; background-color:yellow">
+    Test
+  </div>
+</div>
+The Green area in the left and right is 50pt, as inline-level margins never
+collapse. The distance between the red box and the top and bottom edge is 50pt.
+The distance between the left/right edge and the border of the box is 10pt.
+
+<table border="0">
+  <tr>
+    <td style="background-color:yellow">
+      <div style="margin: 50pt; background-color: green">Test</div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

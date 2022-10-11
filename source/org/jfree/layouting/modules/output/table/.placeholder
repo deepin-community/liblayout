@@ -1,0 +1,4 @@
+Table support classes. Take a layouted result and transform it into a table
+structure.
+
+This is a base module for Excel and HTML-Table exports ..

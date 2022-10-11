@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+# debian/rules file for libformat-java
+
+export JAVA_HOME=/usr/lib/jvm/default-java
+export CLASSPATH=/usr/share/ant/lib/ant-launcher.jar:/usr/share/java/jcommon.jar:/usr/share/java/itext.jar:/usr/share/java/libxml.jar:/usr/share/java/libfonts.jar:/usr/share/java/libloader.jar:/usr/share/java/sac.jar:/usr/share/java/librepository.jar:/usr/share/java/libbase.jar:/usr/share/java/commons-logging.jar:/usr/share/java/flute.jar
+
+DEB_UPSTREAM_VERSION := 0.2.10
+
+%:
+	dh $@ --with javahelper
+
+override_dh_auto_build:
+	dh_auto_build -- jar
+
+override_dh_auto_clean:
+	-rm -rf build
+	-rm -f liblayout*-$(DEB_UPSTREAM_VERSION).jar
+	# don't use them, go sure
+	-rm -f lib/* lib/optional/*
+	mkdir -p lib
+
+override_dh_auto_install:
+	install -m 644 build/lib/liblayout.jar debian/liblayout-java/usr/share/java/liblayout-$(DEB_UPSTREAM_VERSION).jar
+	ln -s liblayout-$(DEB_UPSTREAM_VERSION).jar debian/liblayout-java/usr/share/java/liblayout.jar
+	jh_classpath -pliblayout-java --classpath="/usr/share/java/jcommon.jar /usr/share/java/itext.jar /usr/share/java/flute.jar /usr/share/java/libfonts.jar /usr/share/java/libloader.jar /usr/share/java/libxml.jar /usr/share/java/sac.jar /usr/share/java/librepository.jar" debian/liblayout-java/usr/share/java/liblayout-$(DEB_UPSTREAM_VERSION).jar
+	jh_depends

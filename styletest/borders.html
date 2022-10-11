@@ -1,0 +1,46 @@
+<html>
+<head>
+  <style type="text/css">
+    p {
+      font-size: 10pt;
+      border-left: 1em solid black;
+      font-size: 20pt;
+      border-right: 1em solid black;
+    }
+  </style>
+</head>
+
+<body>
+<span style="padding: 40px"><div style="margin: 2px; border: 1px solid black">
+  Blah</div></span>
+<hr/>
+
+<p>The lazy fox John<span style="background-color:green">theoneandonly </span>
+  is not as lazy as it may seem.</p>
+
+<h1>Testing, how percentage-borders work</h1>
+
+<div style="width: 500pt">
+  <div style="border: 10% solid red">
+    This div has 10% border. (Variable)
+
+    <div style="width:500px">
+      <div style="border: 10% solid green">
+        This div also has 10% border. (Fixed to 50px)
+
+        <div style="width:auto">
+          This div has a width of auto
+          <div style="border: 10% solid blue">
+            There should be no border
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+(You should not see any borders in Mozilla, as that doesnt seem to be implemented.)
+
+
+</body>
+</html>

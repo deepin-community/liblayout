@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+  <TITLE>Example of inline flow on several lines</TITLE>
+  <STYLE type="text/css">
+    @page
+    :
+    left
+    {
+      counter-reset: dodo 0
+    ;
+    }
+    ;
+    EM {
+      padding: 2px;
+      margin: 1em;
+      border-width: medium;
+      border-style: dashed;
+      line-height: 2.4em;
+    }
+
+    span.count {
+      counter-increment: dodo 1;
+      content: counter( dodo );
+      background-color: blue;
+    }
+
+    OL {
+      counter-reset: section;
+      /* Creates a new instance of the
+     section counter with each ol
+     element */
+      list-style-type: none;
+    }
+
+    LI:before {
+      counter-increment: section;
+      /* Increments only this instance
+  of the section counter */
+      content: counters( section, "." ) " ";
+      /* Adds the value of all instances
+   of the section counter separated
+   by a ".". */
+    }
+  </STYLE>
+</HEAD>
+<!--
+This example shows, how to handle block content, that intersects
+inline content. The <EM> is split into two seperate lineboxes, the DIV
+is *not* included in the border-box.
+-->
+
+<BODY>
+<div>
+  <P>Several <EM>emphasized words<div>Block <span class="count">aa</span></div>a</EM>
+    appear here.</P>
+
+  <P style="page-break-before: always;">Several <span class="count">aa</span>
+    <EM>emphasized words<div>Block</div>a</EM> appear here.</P>
+
+  <P>Several <EM>emphasized words<div>Block</div>a <span class="count">aa</span>
+  </EM> appear here.</P>
+</div>
+
+<OL>
+  <LI>item          <!-- 1     -->
+  <LI>item          <!-- 2     -->
+    <OL>
+      <LI>item      <!-- 2.1   -->
+      <LI>item      <!-- 2.2   -->
+      <LI>item      <!-- 2.3   -->
+        <OL>
+          <LI>item  <!-- 2.3.1 -->
+          <LI>item  <!-- 2.3.2 -->
+        </OL>
+        <OL>
+          <LI>item  <!-- 2.3.1 -->
+          <LI>item  <!-- 2.3.2 -->
+          <LI>item  <!-- 2.3.3 -->
+        </OL>
+      <LI>item      <!-- 2.4   -->
+    </OL>
+  <LI>item          <!-- 3     -->
+  <LI>item          <!-- 4     -->
+</OL>
+<OL>
+  <LI>item          <!-- 1     -->
+  <LI>item          <!-- 2     -->
+</OL>
+</BODY>
+</HTML>

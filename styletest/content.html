@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+  <HEAD>
+    <TITLE>Example of inline flow on several lines</TITLE>
+    <STYLE type="text/css">
+      EM {
+        padding: 2px;
+        margin: 1em;
+        border-width: medium;
+        border-style: dashed;
+        line-height: 2.4em;
+      }
+    </STYLE>
+  </HEAD>
+  <!--
+    This example shows, how to handle block content, that intersects
+    inline content. The <EM> is split into two seperate lineboxes, the DIV
+    is *not* included in the border-box.
+    -->
+
+  <BODY>
+    <!-- This does not break! -->
+    <P>Several<EM>emphasizedwordsa</EM>appearhereinalonglinewithnopossiblebreakpositions.</P>
+  </BODY>
+</HTML>

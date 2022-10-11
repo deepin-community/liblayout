@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>CSS3 border-radius examples</title>
+<style type="text/css">
+
+body { background: white; color: black; font-size: 0.83em; line-height: 1.4;}
+
+pre, code, p { font-size: 1em }
+
+p { font-family: "Bitstream Vera Sans", Arial, sans-serif; }
+
+pre, code { font-family: "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, monospace; }
+
+h1, h2, h3 { font-family: Tahoma, Arial, sans-serif; }
+
+h1 { font-size: 1.4em; }
+h2 { font-size: 1.2em; }
+h3 { font-size: 1.1em; }
+
+pre {
+  border: 0.3em solid black;
+  /*padding: 1.5em;*/
+  }
+
+/* Examples */
+
+#ex1 {
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  background-color: pink;
+}
+
+#ex2 {
+  -moz-border-radius: 2em 2em;
+  border-radius: 4em 1em;
+  border-left-style: none;
+  border-top-color: green;
+  background-color: pink;
+}
+
+#ex3 {
+  border-top-left-radius: 1em;
+  background-color: pink;
+}
+
+#ex4 {
+  border-top-right-radius: 1em;
+  background-color: pink;
+}
+
+#ex5 {
+  border-bottom-right-radius: 1em;
+  background-color: pink;
+}
+
+#ex6 {
+  border-bottom-left-radius: 1em;
+  background-color: pink;
+}
+
+
+</style>
+</head>
+
+<body>
+<h1>Border-radius examples</h1>
+<h2>Introduction</h2>
+<p>This document contains some examples of use of the CSS3 border-radius properties, and is a supplemental document for the entry  <a href="http://virtuelvis.com/archives/2004/11/imageless-rounded-corners">CSS rounded corners without images</a> at <a href="http://virtuelvis.com/">Arve Bersvendsen's Virtuelvis</a>. To view this document correctly, you will need a CSS3 capable browser (none of which exist at the time of writing, or a browser using the Gecko rendering engine from the <a href="http://www.mozilla.org/">Mozilla foundation</a>. Please note that parts of the demonstration breaks in Mozilla. These parts are commented specially.</p>
+
+<h2>The border-radius property</h2>
+
+<p>The border-radius property will round all four corners of a corner.</p>
+
+<h3>One length value</h3>
+
+<p>If the second length value is omitted, it is interpreted as being equal to the first, meaning that <code>border-radius: 5px 5px</code> is equal to <code>border-radius: 5px;</code>. Example:
+
+<pre id="ex1"><code>#ex1 {
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+}</code></pre>
+
+<h3>Different length values</h3>
+<p>When the length values are different, the first length value will be interpreted as horizontal length, and the second one as vertical length, for left to right scripts. Examples</p>
+
+<pre id="ex2"><code>#ex2 {
+  -moz-border-radius: 2em 1em;
+  border-radius: 2em 1em;
+
+
+
+  
+}</code></pre>
+
+<p><strong>Note that <em>Mozilla breaks horribly</em>, and makes the top-left and bottom-right corners circles with radius 2em, and the bottom-left and top-right corners are circles with radius 1em, instead of making all four corners ellipses with horizontal radius 2em and vertical radius 1em.</strong></p>
+
+<h2>Individual corners</h2>
+
+<p>All of the following properties do not have mozilla equivalent properties.</p>
+
+<p>Example: </p>
+<pre id="ex3"><code>#ex3 {
+  border-top-left-radius: 1em;
+}</code></pre>
+
+<pre id="ex4"><code>#ex3 {
+  border-top-right-radius: 1em;
+}</code></pre>
+
+<pre id="ex5"><code>#ex3 {
+  border-bottom-right-radius: 1em;
+}</code></pre>
+
+<pre id="ex6"><code>#ex3 {
+  border-bottom-left-radius: 1em;
+}</code></pre>
+
+</body>
+</html>

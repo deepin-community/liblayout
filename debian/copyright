@@ -1,0 +1,23 @@
+This package was debianized by Rene Engelhard <rene@debian.org>
+Mon, 27 Aug 2007 19:59:16 +0200
+
+It was downloaded from <http://sourceforge.net/projects/jfreereport/>
+
+Upstream Authors: Thomas Morgner, David Gilbert and others
+
+Copyright:
+
+    (C) Copyright 2006, by Pentaho Corporation and Contributors.
+
+    This package is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Lesser General Public
+    License as published by the Free Software Foundation; either
+    version 2 of the License, or (at your option) any later version.
+
+    This package is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Lesser General Public License for more details.
+
+On Debian systems, the complete text of the GNU Lesser General
+Public License can be found in `/usr/share/common-licenses/LGPL'.

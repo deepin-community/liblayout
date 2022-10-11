@@ -1,0 +1,25 @@
+@namespace url(http://jfreereport.sourceforge.net/namespaces/layout); 
+@namespace xml url(http://www.w3.org/XML/1998/namespace);
+
+* {
+  -x-liblayout-language: attr("xml|lang");
+}
+
+auto-table {
+  display: table;
+}
+
+auto-table-body {
+  display: table-row-group;
+}
+
+auto-table-row {
+  display: table-row;
+}
+
+auto-linebox {
+  display: block;
+}
+
+anonymous-context {
+}

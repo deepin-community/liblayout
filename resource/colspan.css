@@ -1,0 +1,6 @@
+@namespace url(http://www.w3.org/1999/xhtml); /* set default namespace to HTML */
+
+col[span],
+colgroup[span] {
+  -x-liblayout-colspan: attr(span);
+}

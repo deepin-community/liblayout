@@ -1,0 +1,47 @@
+<html>
+<head>
+  <style type="text/css">
+    h1 { border: 1pt solid black; }
+  
+    h1:before {
+      content: "<b>test</b>";
+    }
+
+	b {
+		background-color: green;
+	}
+
+    b:before {
+      content: "<h1>test2</h1>";
+    }
+
+    p {
+      content: "Test";
+    }
+  </style>
+</head>
+<body>
+  <p>
+    A
+    <span style="position:relative; font-size:40px; z-index:2;">
+      <span style="position: relative; z-index:0">LAYER 1</span>
+    </span>
+    <span style="position:relative; left: -100px; color:red; font-size:60px; z-index:1">
+      <span>LAYER 2</span>
+    </span>
+    B
+  </p>
+
+  <p>
+    Some long text, divided by some more text, divided by some more text,
+    <span style="background-color: blue">
+    divided by some more text, divided by some more text, divided by some more text,
+    <div style="float:left">I am floating ... </div>
+    divided by some more text, divided by some more text, divided by some more text,
+      </span>
+    divided by some more text, divided by some more text, divided by some more text.
+  </p>
+
+<p>Blah</p>
+</body>
+</html>

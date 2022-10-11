@@ -1,0 +1,53 @@
+<html>
+<head>
+  <style type="text/css">
+    h1 { border: 1pt solid black; }
+  
+    h1:before {
+      content: "<b>test</b>";
+    }
+
+	b {
+		background-color: green;
+	}
+
+    b:before {
+      content: "<h1>test2</h1>";
+    }
+
+    p {
+      content: "Test";
+    }
+
+    img:before {
+      content: "Generated";
+    }
+
+    div.testclass {
+      border: 1pt solid green;
+      background-color: yellow;
+      padding: 3pt;
+    }
+
+    div.testclass:before {
+      border: 1pt solid blue;
+      background-color: red;
+      content: "Before";
+    }
+    div.testclass:after {
+      border: 1pt solid blue;
+      background-color: red;
+      content: "After";
+    }
+  </style>
+</head>
+<body>
+<h1>What <b>do</b> you want?</h1>
+<img src="denker.gif" alt="Denker"/>
+<p>Blah</p>
+
+<div class="testclass">
+  Some text
+</div>
+</body>
+</html>

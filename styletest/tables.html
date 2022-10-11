@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>asd</title>
+  <style type="text/css">
+    table.test td {
+      margin: 4pt;
+      border: 1px solid black;
+    }
+
+    table.test {
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+
+<body>
+What makes a table a table?
+<hr/>
+
+<table>
+  <thead>
+
+  </thead>
+  <thead>
+
+  </thead>
+  <tfoot>
+
+  </tfoot>
+  <tfoot>
+
+  </tfoot>
+  <tbody>
+
+  </tbody>
+</table>
+
+A simple table.
+<table border="1">
+  <tr>
+    <th>
+      Now how do we render this?
+    </th>
+    <td>
+      Test
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Test
+    </td>
+    <td>
+      Test
+    </td>
+  </tr>
+</table>
+
+<hr/>
+This table will have the collapsing border-model.
+<table class="test">
+  <tr>
+    <td>
+      Data
+    </td>
+    <td>
+      More data
+    </td>
+  </tr>
+  <tr>
+    <td>dasdasd</td>
+  </tr>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <td>
+        asdasd
+      </td>
+    </tr>
+  </thead>
+</table>
+
+<p>A table with background images and a colspan definition</p>
+
+<table>
+  <colgroup style="background-image:url(gorilla.jpg);" span="2"/>
+  <tbody>
+    <tr>
+      <td>
+        Test
+      </td>
+      <td>
+        Test
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A table with background images and a spanned column definition</p>
+
+<table>
+  <col style="background-image:url(gorilla.jpg);" span="2"/>
+  <tbody>
+    <tr>
+      <td>
+        Test
+      </td>
+      <td>
+        Test
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A table with background images and two column definitions</p>
+
+<table>
+  <col style="background-image:url(gorilla.jpg);" span="1"/>
+  <col style="background-image:url(gorilla.jpg);" span="1"/>
+  <tbody>
+    <tr>
+      <td>
+        Test
+      </td>
+      <td>
+        Test
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Testing, whether and how width applies to colgroups.</p>
+
+<table>
+  <colgroup style="background-image:url(gorilla.jpg);width:100pt" span="2"/>
+  <tbody>
+    <tr>
+      <td>
+        Test
+      </td>
+      <td>
+        Test
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p>Testing, how the system resolves the complicated and buggy definitions.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td rowspan="2">
+        Test
+      </td>
+      <td>
+        Test
+      </td>
+      <td rowspan="2">
+        Test<br>
+        test
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        overlapping
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p>Testing, how cells deal with margins..</p>
+
+Margins are not supported on table-sections, table-rows and table-cells.
+
+<table style="border-collapse:separate;">
+  <tbody style="margin: 400em">
+    <tr style="margin:2em">
+      <td rowspan="2" style="margin: 400em">
+        No margins
+      </td>
+      <td>
+        Test
+      </td>
+      <td rowspan="2">
+        Test<br>
+        test
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        overlapping
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p>Testing, how borders are handled in the separate column model.</p>
+
+Borders are not supported on table-rows or table-sections.
+
+<table style="border-collapse:separate;">
+  <tbody style="border: 3pt solid blue">
+    <tr style="border: 3pt solid green">
+      <td rowspan="2" style="border: 1pt solid red">
+        TR-Border green
+      </td>
+      <td style="border: 1pt solid yellow">>
+        Test
+      </td>
+      <td rowspan="2">
+        Test<br>
+        test
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        overlapping
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<p>Testing, how paddings are handled in the separate column model.</p>
+
+Paddings are not supported on table-rows or table-sections.
+
+<table style="border-collapse:separate;">
+  <tbody style="padding: 4em">
+    <tr style="padding: 4em">
+      <td rowspan="2" style="border: 1pt solid red">
+        TR-Border green
+      </td>
+      <td style="border: 1pt solid yellow">>
+        Test
+      </td>
+      <td rowspan="2">
+        Test<br>
+        test
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        overlapping
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Testing, how content in rows or sections is handled.</p>
+
+Paddings are not supported on table-rows or table-sections.
+
+<table style="border-collapse:separate;">
+  In Table
+  <tbody style="padding: 4em">
+    In Table-Body
+    <tr style="padding: 4em">
+      <td style="border: 1pt solid red">
+        TR-Border green
+      </td>
+      <td style="border: 1pt solid yellow">>
+        Test
+      </td>
+      <td rowspan="2">
+        Test<br>
+        test
+      </td>
+    </tr>
+    <tr>
+      In TableRow
+      <td>
+        Content
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

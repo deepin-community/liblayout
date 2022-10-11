@@ -1,0 +1,13 @@
+Index: liblayout/build.xml
+===================================================================
+--- liblayout.orig/build.xml
++++ liblayout/build.xml
+@@ -35,7 +35,7 @@
+ 
+    <!-- Build classes -->
+    <target name="classes" depends="prepare">
+-     <javac srcdir="source" destdir="${build.classes}" debug="off" optimize="on">
++     <javac target="1.8" srcdir="source" destdir="${build.classes}" debug="off" optimize="on">
+        <classpath refid="classpath"/>
+        <exclude name="org/jfree/layouting/modules/output/excel/**"/>
+        <exclude name="org/jfree/layouting/modules/output/pdf/**"/>

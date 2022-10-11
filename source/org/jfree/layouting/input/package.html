@@ -1,0 +1,29 @@
+<html>
+<head></head>
+<body>
+  <h1>
+    Processing Level 1: Getting the data in a standarized way.
+  </h1>
+  <p>
+    A DocumentBuilder implementation is used for the layouting. There must
+    be at least two implementations. The very simple one is holding the whole
+    document in memory.
+  </p>
+  <p>
+    A more sophisticated one, which removes the fully processed nodes from
+    the document allows the processing of larger documents, which would not
+    fully fit into the available memory otherwise. That document-builder should
+    be able to restart the processing from a certain page later.
+  </p>
+  <p>
+    An optional third one might accept already computed content as input, and
+    therefore reduces the costs for the layouting without having to restart the
+    whole input processing again.
+  </p>
+
+  <p>
+    Once sufficient document content is available, start the layouting. 
+  </p>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>asd</title>
+</head>
+<body>
+What makes a table a table?
+<hr/>
+<table border="1">
+  <tr>
+    <th>
+    Now how do we render this?
+    </th>
+  </tr>
+</table>
+
+<hr/>
+<table border="1">
+  <tr>
+    <td>
+      Data
+    </td>
+    <td>
+      More data
+    </td>
+  </tr>
+  <tr>
+    <td>dasdasd</td>
+  </tr>
+</table>
+
+<table>
+  <thead>
+    <tr>
+    <td>
+asdasd
+    </td>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+    <td>
+asdasd
+    </td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+    <td>
+asdasd
+    </td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

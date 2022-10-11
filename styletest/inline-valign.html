@@ -1,0 +1,73 @@
+<html>
+<head>
+  <style type="text/css">
+    br {
+      border: 1pt solid black;
+      background-color: green;
+
+    }
+
+  </style>
+</head>
+
+<body>
+<h1>
+  Testing how the whitespace removeal works.
+</h1>
+<p style="font-family:monospace;">
+  <span style="border:1px solid red">a <span style="border:1px solid blue"> b </span> a</span>
+</p>
+
+<hr/>
+
+<p>
+  <span style="font-size:30pt">Some inline text<span style="font-size:10pt; vertical-align:top;">Something <span style="font-size:15pt">else</span> </span>else</span>
+</p>
+
+<p>
+  <span style="font-size:30pt">Xxxx<span style="font-size: 10pt; vertical-align:sub;">Torin</span></span>
+</p>
+
+<p>
+  <span style="font-size:30pt">xxxX<span style="font-size: 10pt; vertical-align:super;">Torin</span></span>
+</p>
+
+<p>
+  <span style="font-size:30pt">x<span style="font-size: 10pt; vertical-align:super;">y</span></span>
+  <span style="font-size:30pt">x<span style="font-size: 10pt; vertical-align:super;">a</span></span>
+</p>
+
+<p style="border: 1pt solid black">
+  <span style="font-size:10pt">Text
+    more text
+    <span style="vertical-align:top; font-size:60pt">Top</span>
+    more text
+  </span>
+</p>
+
+  <p style="border: 1pt solid black">
+    <span style="font-size:10pt">Text
+      <span style="vertical-align:bottom; font-size:40pt">Bottom</span>
+      more text
+    </span>
+  </p>
+
+  <p style="border: 1pt solid black">
+    <span style="font-size:10pt">Text
+      <span style="vertical-align:bottom; font-size:40pt">Bottom</span>
+      more text
+      <span style="vertical-align:top; font-size:60pt">Top</span>
+      more text
+    </span>
+  </p>
+
+  <p style="border: 1pt solid black">
+    <span style="font-size:10pt">Text
+      <span style="vertical-align:bottom; font-size:40pt">Bottom</span>
+      more text
+      <span style="vertical-align:bottom; font-size:60pt">Bottom</span>
+      more text
+    </span>
+  </p>
+</body>
+</html>
